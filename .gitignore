@@ -61,3 +61,8 @@ buck-out/
 #
 .jest/
 coverage/
+
+# Web artifacts
+#
+.fusebox/
+dist/
