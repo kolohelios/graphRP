@@ -4,6 +4,8 @@
   "description": "graphRP Mobile Clients - Android, iOS, and Web",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "run-android": "react-native run-android",
+    "run-ios": "react-native run-ios",
     "test": "jest --coverage"
   },
   "author": "Jon Edwards jkedwards@me.com http://kolohelios.com",

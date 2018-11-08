@@ -37,6 +37,7 @@ npm-debug.log
 yarn-error.log
 
 # BUCK
+#
 buck-out/
 \.buckd/
 *.keystore
@@ -53,6 +54,7 @@ buck-out/
 */fastlane/screenshots
 
 # Bundle artifact
+#
 *.jsbundle
 
 # Jest
