@@ -12,7 +12,7 @@ interface IConfig {
   }
 }
 
-// TODO if we're setting the app name and consuming it here, do we stilll need /app.json?
+// TODO if we're setting the app name and consuming it from here, do we stilll need /app.json?
 const Config: IConfig = {
   app: {
     name: 'graphRP'

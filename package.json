@@ -3,11 +3,13 @@
   "version": "0.0.1",
   "description": "graphRP Mobile Clients - Android, iOS, and Web",
   "scripts": {
+    "build-web": "node fuse dist",
     "run-android": "react-native run-android",
     "run-ios": "react-native run-ios",
     "run-web": "node fuse",
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test-web": "jest --config=./web.jest.config.js"
   },
   "author": "Jon Edwards jkedwards@me.com http://kolohelios.com",
   "license": "Apache-2.0",
@@ -16,19 +18,24 @@
     "react-art": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-native": "0.57.4",
-    "react-native-web": "^0.9.6"
+    "react-native-web": "^0.9.6",
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
     "@types/jest": "^23.3.9",
+    "@types/puppeteer": "^1.10.0",
     "@types/react": "^16.4.18",
     "@types/react-dom": "^16.0.9",
     "@types/react-native": "^0.57.7",
+    "@types/react-router-dom": "^4.3.1",
     "@types/react-test-renderer": "^16.0.3",
     "babel-jest": "23.6.0",
     "fuse-box": "^3.6.0",
     "jest": "23.6.0",
+    "jest-dev-server": "^3.5.0",
     "metro-react-native-babel-preset": "0.49.0",
+    "puppeteer": "^1.10.0",
     "react-native-typescript-transformer": "^1.2.10",
     "react-test-renderer": "16.6.0-alpha.8af6728",
     "ts-jest": "^23.10.4",

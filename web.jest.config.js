@@ -9,7 +9,7 @@ module.exports = {
       '<rootDir>/node_modules/react-native/jest/preprocessor.js',
     '\\.(ts|tsx)$': 'ts-jest',
   },
-  testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
+  testRegex: '(/__web_tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
   testPathIgnorePatterns: ['\\.snap$', '<rootDir>/node_modules/'],
   cacheDirectory: '.jest/cache',
   collectCoverageFrom: [
@@ -23,6 +23,7 @@ module.exports = {
     "/node_modules/",
     "/coverage/",
     "/dist/",
-    "/web/",
   ],
+  globalSetup: './web/global-setup.js',
+  globalTeardown: './web/global-teardown.js',
 }
