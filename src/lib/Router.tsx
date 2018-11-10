@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { Platform } from 'react-native'
 import { BrowserRouter, Router } from 'react-router-dom'
-import { createMemoryHistory, MemoryHistory } from 'history'
+import { History, createBrowserHistory, createMemoryHistory, MemoryHistory } from 'history'
 
-export const history: MemoryHistory = createMemoryHistory()
+let appHistory: History | MemoryHistory
 
 interface IProps {
   children: React.ReactNode
@@ -11,8 +11,12 @@ interface IProps {
 
 export default (props: IProps) => {
   if (Platform.OS === 'web') {
-    return <BrowserRouter>{props.children}</BrowserRouter>
+    appHistory = createBrowserHistory()
+    return <Router history={appHistory}>{props.children}</Router>
   } else {
-    return <Router history={history}>{props.children}</Router>
+    appHistory = createMemoryHistory() as MemoryHistory
+    return <Router history={appHistory}>{props.children}</Router>
   }
 }
+
+export { appHistory }

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { history } from '../../lib/Router'
+import { appHistory } from '../../lib/Router'
 import { Link as ProvidedLink } from 'react-router-dom'
 import { TouchableOpacity, Platform, Text, ViewStyle } from 'react-native'
 import styles from './styles'
@@ -12,7 +12,7 @@ interface IProps {
 
 const Link = (props: any) => {
   const followLink = () => {
-    history.push(props.to)
+    appHistory.push(props.to)
   }
 
   if (Platform.OS === 'web') {

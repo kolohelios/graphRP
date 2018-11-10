@@ -1,12 +1,14 @@
 import * as React from 'react'
 import HomeScreen from './HomeScreen'
 import LoginScreen from './LoginScreen'
-import { Route } from 'react-router-dom'
+import NotificationsScreen from './NotificationsScreen'
+import { Route, Redirect } from 'react-router-dom'
 import { View } from 'react-native';
 
 const screens = [
   HomeScreen,
   LoginScreen,
+  NotificationsScreen,
 ]
 
 export default () =>
@@ -20,4 +22,5 @@ export default () =>
         />
       })
     }
+    <Route exact path="/" render={() => <Redirect to="/home"/>} />
   </View>
