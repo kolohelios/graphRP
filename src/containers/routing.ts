@@ -1,6 +1,7 @@
 import { Container } from 'unstated'
 
 interface IRouterState {
+  showModal: boolean
   sidebarOpen: boolean
 }
 
@@ -8,7 +9,8 @@ class RouterContainer extends Container<IRouterState> {
   constructor() {
     super()
     this.state = {
-      sidebarOpen: false
+      showModal: false,
+      sidebarOpen: false,
     }
   }
 

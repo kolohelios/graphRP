@@ -13,7 +13,11 @@ export default () =>
   <View>
     {
       screens.map((screen) => {
-        return <Route path={screen.path} component={screen} />
+        return <Route
+          key={screen.screenName}
+          path={screen.path}
+          component={screen}
+        />
       })
     }
   </View>
