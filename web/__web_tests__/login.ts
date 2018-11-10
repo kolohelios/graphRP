@@ -19,7 +19,7 @@ describe('login behavioral test', async () => {
         await bodyHandle.dispose()
       }
 
-      expect(html).toContain('Welcome to React Native')
+      expect(html).toContain('Home')
 
       await browser.close()
     } catch (error) {

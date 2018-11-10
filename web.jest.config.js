@@ -24,6 +24,6 @@ module.exports = {
     "/coverage/",
     "/dist/",
   ],
-  globalSetup: './web/global-setup.js',
-  globalTeardown: './web/global-teardown.js',
+  globalSetup: './web/web-test-global-setup.js',
+  globalTeardown: './web/web-test-global-teardown.js',
 }
