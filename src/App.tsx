@@ -3,9 +3,7 @@ import { Platform, SafeAreaView, StyleSheet, View } from 'react-native'
 import Router from './lib/Router'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
-import { Route } from 'react-router-dom'
-import HomeScreen from './screens/HomeScreen'
-import LoginScreen from './screens/LoginScreen'
+import Screens from './screens'
 import { Provider } from 'unstated'
 
 
@@ -19,8 +17,7 @@ export default class App extends React.Component<Props> {
             <View>
               <Header />
               <Sidebar />
-              <Route path="/home" component={HomeScreen} />
-              <Route path="/login" component={LoginScreen} />
+              <Screens />
             </View>
             {/* <ModalCover />
             <Modal /> */}
