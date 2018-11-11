@@ -1,13 +1,12 @@
 import * as React from 'react'
 import Router, { appHistory } from './lib/Router'
 import Layout from './Layout'
-import { Provider } from 'unstated'
+import { Provider as UnstatedProvider } from 'unstated'
 import authContainer, { AuthContainer } from './containers/auth'
 import UNSTATED from 'unstated-debug'
-import { Redirect } from 'react-router'
+import ApolloProvider from './lib/ApolloProvider'
 
 UNSTATED.logStateChanges = true
-
 
 export default class App extends React.Component {
   async componentWillMount() {
@@ -20,11 +19,13 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Provider>
-        <Router>
-          <Layout />
-        </Router>
-      </Provider>
+      <ApolloProvider>
+        <UnstatedProvider>
+          <Router>
+            <Layout />
+          </Router>
+        </UnstatedProvider>
+      </ApolloProvider>
     )
   }
 }
